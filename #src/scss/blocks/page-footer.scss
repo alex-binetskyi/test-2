@@ -1,0 +1,430 @@
+.page-footer {
+  padding: 40px 0 20px;
+  background: #0082c6;
+
+  @include media-tablet {
+    padding: 20px 30px;
+  }
+}
+
+.page-footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 910px;
+  margin: 0 auto;
+
+  @include media-tablet {
+    width: auto;
+  }
+}
+
+.page-footer__contacts-container {
+  width: 280px;
+  margin-right: 55px;
+
+  @include media-tablet {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    width: auto;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    padding-right: 30px;
+  }
+
+  @include media-mobile {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+.page-footer__contacts-text-container {
+  @include media-mobile {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+}
+
+.page-footer__title {
+  margin: 0 0 15px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.page-footer__text {
+  margin: 0 0 10px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.page-footer__contact-list {
+  @include list-reset;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 200px;
+  margin-bottom: 35px;
+
+  @include media-tablet {
+    margin-bottom: 20px;
+  }
+}
+
+.page-footer__contact-item {
+
+  &--mail a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 195px;
+    margin-bottom: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &--tel a {
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      border-bottom-color: #ffffff;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &--whatsapp,
+  &--telegram {
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #ffffff;
+
+        path {
+          fill: #0082c6;
+        }
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.page-footer__tel-list {
+  @include list-reset;
+}
+
+.page-footer__tel-item {
+  margin-bottom: 10px;
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+
+  a {
+    position: relative;
+    padding-left: 30px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--malta a::before {
+    background-image: url("../img/malta_flag.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+
+  &--russia a::before {
+    background-image: url("../img/russia_flag.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &--kazahstan a::before {
+    background-image: url("../img/kazahstan_flag.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.page-footer__joint-container {
+  width: 160px;
+  margin-right: auto;
+
+  @include media-tablet {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    width: auto;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  @include media-mobile {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+}
+
+.page-footer__citizenship-container {
+  margin-bottom: 35px;
+
+  @include media-tablet {
+    margin-right: 10px;
+    padding: 0 10px;
+  }
+}
+
+.page-footer__programs-container {
+
+  @include media-tablet {
+    padding: 0 10px;
+  }
+}
+
+.page-footer__title--citizenship {
+  margin: 0 0 5px;
+}
+
+.page-footer__citizenship-list {
+  @include list-reset;
+}
+
+.page-footer__citizenship-item {
+  margin-bottom: 8px;
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__link {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border-bottom-color: #ffffff;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.page-footer__title--programs {
+  margin-bottom: 8px;
+}
+
+.page-footer__programs-list {
+  @include list-reset;
+}
+
+.page-footer__programs-item {
+  margin-bottom: 8px;
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__residence-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 280px;
+
+  @include media-tablet {
+    align-items: flex-start;
+    max-width: none;
+    margin: 0 auto;
+    width: 600px;
+
+    & > div {
+      padding: 0 10px;
+    }
+  }
+
+  @include media-mobile {
+    justify-content: flex-start;
+  }
+}
+
+.page-footer__residence-permit-container {
+  @include media-mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.page-footer__permanent-residence-list {
+  @include list-reset;
+}
+
+.page-footer__title--residence-permit {
+  margin-bottom: 8px;
+}
+
+.page-footer__residence-permit-item {
+  margin-bottom: 8px;
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}
+
+
+.page-footer__title--permanent-residence {
+  margin-bottom: 5px;
+}
+
+.page-footer__residence-permit-list {
+  @include list-reset;
+}
+
+.page-footer__permanent-residence-item {
+  margin-bottom: 8px;
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__social-container {
+  @include list-reset;
+  width: 100%;
+
+  @include media-tablet {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.page-footer__social-list {
+  @include list-reset;
+  display: flex;
+
+  @include media-tablet {
+    margin: 0 auto;
+  }
+}
+
+.page-footer__social-item {
+  margin-right: 8px;
+
+  &:nth-last-child(1) {
+    margin-right: 0;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #ffffff;
+
+      path {
+        fill: #0082c6;
+      }
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}
+
+.page-footer__info-container {
+  width: 410px;
+  margin: 80px auto 0;
+  text-align: center;
+
+  @include media-tablet {
+    width: 100%;
+  }
+}
+
+.page-footer__info-copyright {
+  margin: 0 0 25px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.page-footer__info-cookies {
+  margin: 0;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  color: #b3b0b0;
+}

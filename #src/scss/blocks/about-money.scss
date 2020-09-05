@@ -1,0 +1,153 @@
+.about-money {
+  width: 1140px;
+  margin: 0 auto 80px;
+
+  @include media-tablet {
+    width: auto;
+    padding: 0 30px;
+    margin: 0 auto 60px;
+  }
+}
+
+.about-money__lead {
+  margin: 0 0 35px;
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 48px;
+
+  @include media-mobile {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.about-money__list {
+  @include list-reset;
+  margin-bottom: 40px;
+  counter-reset: about-money-counter;
+}
+
+.about-money__item {
+  position: relative;
+  margin-bottom: 45px;
+  padding-left: 80px;
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "0" counter(about-money-counter);
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-family: "Raleway";
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 36px;
+    color: #00acec;
+    counter-increment: about-money-counter;
+  }
+
+  @include media-mobile {
+    padding-left: 40px;
+
+    &::before {
+      top: -5px;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}
+
+.about-money__item-title {
+  margin: 0 0 25px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000000;
+
+  @include media-mobile {
+    font-size: 20px;
+  }
+}
+
+.about-money__item-text {
+  margin: 0 0 7px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 28px;
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+
+  strong,
+  b {
+    display: block;
+    font-weight: bold;
+  }
+}
+
+.about-money__inner-list {
+  @include list-reset;
+  margin-bottom: 25px;
+  counter-reset: about-money-inner-counter;
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}
+
+.about-money__inner-list li {
+  position: relative;
+  margin: 0 0 7px;
+  padding-left: 20px;
+
+  &::before {
+    content: counter(about-money-inner-counter)  ".";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    counter-increment: about-money-inner-counter;
+  }
+}
+
+.about-money__link {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  padding: 24px 25px 25px;
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(180deg, #43a6f7 0%, #0a88cd 100%);
+  box-shadow: 0px 20px 22px rgba(0, 131, 202, 0.15), inset 5px 5px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 55px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: linear-gradient(180deg, #045987 0%, #0c89cf 100%);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  @include media-mobile {
+    width: auto;
+    max-width: 400px;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

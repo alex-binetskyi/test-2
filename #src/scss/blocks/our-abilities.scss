@@ -1,0 +1,122 @@
+.our-abilities {
+  width: 1115px;
+  margin: 0 auto 80px;
+
+  @include media-tablet {
+    width: auto;
+    margin: 0 auto 60px;
+    padding: 0 30px;
+  }
+
+  @include media-mobile {
+    padding: 0 15px;
+  }
+}
+
+.our-abilities__title {
+  margin: 0 0 45px;
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 54px;
+  text-align: center;
+
+  @include media-mobile {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.our-abilities__list {
+  @include list-reset;
+  display: flex;
+  justify-content: space-between;
+
+  @include media-mobile {
+    flex-direction: column;
+  }
+}
+
+.our-abilities__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 315px;
+  min-height: 360px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    z-index: 2;
+    width: 165px;
+    height: 165px;
+    background-color: #b0b7bb;
+    border-radius: 50%;
+    transform: translateX(-50%);
+
+    @include media-tablet {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    width: 185px;
+    height: 185px;
+    background: linear-gradient(0deg, #000000 -0.54%, #4E92B6 101.08%), #B0B7BB;
+    border-radius: 50%;
+    transform: translateX(-50%);
+
+    @include media-tablet {
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  @include media-tablet {
+    min-height: 260px;
+  }
+
+  @include media-mobile {
+    width: auto;
+    margin-bottom: 20px;
+    min-height: 240px;
+  }
+}
+
+.our-abilities__number {
+  position: absolute;
+  top: 51px;
+  left: 50%;
+  z-index: 3;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 84px;
+  text-align: center;
+  color: #ffffff;
+  transform: translateX(-50%);
+
+  @include media-tablet {
+    top: 30px;
+  }
+}
+
+.our-abilities__text {
+  min-height: 55px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+
+  @include media-tablet {
+    padding: 0 10px;
+  }
+}

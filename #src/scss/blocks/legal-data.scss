@@ -1,0 +1,131 @@
+.legal-data {
+  display: flex;
+  width: 100%;
+  min-height: 550px;
+  margin-bottom: 165px;
+
+  @include media-tablet {
+    min-height: auto;
+  }
+
+  @include media-mobile {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+}
+
+.legal-data__description {
+  box-sizing: border-box;
+  width: 50%;
+  padding-top: 45px;
+  padding-left: 120px;
+  background-color: rgba(3, 100, 151, 0.7);
+  background-image: url("../img/legal-data-background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include retin-screen {
+    background-image: url("../img/legal-data-background@2x.jpg");
+  }
+
+  @include media-tablet {
+    padding: 20px 40px 30px;
+  }
+
+  @include media-mobile {
+    width: 100%;
+  }
+}
+
+.webp .legal-data__description {
+  background-image: url("../img/legal-data-background.webp");
+
+  @include retin-screen {
+    background-image: url("../img/legal-data-background@2x.webp");
+  }
+}
+
+.legal-data__title {
+  margin-bottom: 20px;
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 48px;
+  color: #ffffff;
+}
+
+.legal-data__description-text {
+  width: 325px;
+  margin: 0 auto 30px 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 28px;
+  color: #ffffff;
+
+  &:nth-last-child(1) {
+    margin-bottom: 10px;
+  }
+
+  @include media-tablet {
+    width: auto;
+  }
+}
+
+.legal-data__link {
+  display: block;
+  box-sizing: border-box;
+  width: 250px;
+  padding: 16px 17px 18px;
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  box-shadow: inset 5px 5px 20px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(0 20px 22px rgba(0, 131, 202, 0.15));
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.legal-data__list-container {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 50px 115px 40px 125px;
+  background-color: #e9e7ea;
+
+  @include media-tablet {
+    padding: 20px 40px 30px;
+  }
+
+  @include media-mobile {
+    width: 100%;
+  }
+}
+
+.legal-data__item-title {
+  margin: 0 auto 20px 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.legal-data__list {
+  @include list-reset;
+}
+
+.legal-data__item {
+  margin: 0 0 20px 0;
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}
+
+.legal-data__item-text {
+  font-size: 14px;
+  line-height: 28px;
+  color: #0083ca;
+}

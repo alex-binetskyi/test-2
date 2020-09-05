@@ -1,0 +1,139 @@
+.employee {
+  display: flex;
+  @include media-mobile {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.employee__image {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  margin: 0 15px auto 0;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @include media-mobile {
+    margin: 0 auto 30px;
+  }
+}
+
+.employee__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.employee__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 80px;
+  margin: 0 0 15px;
+}
+
+.employee__name {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.employee__partner {
+  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  color: #0083ca;
+}
+
+.employee__position {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.employee__task {
+  margin: 0 0 15px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.employee__link-more {
+  display: block;
+  margin: 0 0 16px;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  color: #0083ca;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: #045987;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.employee__social-list {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+  width: 192px;
+  margin-top: auto;
+
+  li {
+    margin: 0 4px;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
+
+  @include media-mobile {
+    margin: auto auto 0;
+  }
+}
+
+.employee__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border: 0.5px solid #0082c6;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+
+  path {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    background-color: #0082c6;
+
+    path {
+      fill: #ffffff;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+
+    path {
+      opacity: 0.7;
+    }
+  }
+}

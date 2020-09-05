@@ -1,0 +1,48 @@
+.team {
+  width: 1140px;
+  margin: 0 auto 155px;
+
+  @include media-tablet {
+    width: auto;
+    padding: 0 30px;
+    margin: 0 auto 80px;
+  }
+}
+
+.team__title {
+  margin: 0 auto 35px;
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+
+  @include media-mobile {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.team__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.team__item {
+  width: 555px;
+  margin: 0 0 32px;
+
+  &:nth-last-child(1) {
+    margin: 0 auto;
+  }
+
+  @include media-tablet {
+    margin: 0 auto 32px;
+  }
+
+  @include media-mobile {
+    width: auto;
+  }
+}

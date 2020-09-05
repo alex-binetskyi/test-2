@@ -1,0 +1,44 @@
+.page-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 400px;
+  margin: 0 0 80px;
+  background-image: url("../img/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include retin-screen {
+    background-image: url("../img/banner@2x.jpg");
+  }
+
+  @include media-mobile {
+    height: 100vh;
+  }
+}
+
+.webp .page-header {
+  background-image: url("../img/banner.webp");
+
+  @include retin-screen {
+    background-image: url("../img/banner@2x.webp");
+  }
+}
+
+.page-header__title {
+  align-self: center;
+  margin-top: 60px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 90px;
+  color: #ffffff;
+
+  @include media-mobile {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
